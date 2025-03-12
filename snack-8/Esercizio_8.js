@@ -175,3 +175,76 @@ const HandleObjectGenFun = (obj, callbacks)=>{
 
     return new_object;
 }
+
+//TASK DI QUESTO ESERCIZIO:
+// Doppia ogni numero (map)
+// Scrivi una funzione che, dato un array di numeri, 
+// restituisce un nuovo array con ogni numero raddoppiato.
+
+/**
+ * HandleIncrementNumList - è una funzione che restituisce un nuovo array con i numeri incrementati
+ * di 2 ad ogni elemento dell'array numerico.
+ *
+ * @param {param} array - Aggiunge come paramentro qualsiasi array contente un numero
+ * @returns {ReturnType} - La funzione restituice il valore di array creato in map()  
+ */
+
+const HandleIncrementNumList = (array)=>{
+    console.log("Lista incrementata di numeri");
+    return array.map((element) => element * 2);
+}
+
+console.log(HandleIncrementNumList(list_number));
+
+// Seconda soluzione
+
+const HandleFunForEachIncrem = (array)=>{
+    let number_increment = [];
+    console.log("Lista incrementata di due in funzione:")
+    array.forEach((element)=>{
+        return number_increment.push(element * 2);
+    })
+    return number_increment;
+}
+
+console.log(HandleFunForEachIncrem(list_number));
+
+// TASK DI QUESTO ESERCIZIO:
+// Filtra solo i numeri pari (filter)
+// Scrivi una funzione che restituisce un array con solo i numeri pari.
+
+console.log("Array di Numeri Pari");
+
+const list_par_number = list_number.map((element) => {
+    if (element % 2 === 0) {
+        return element;
+    }
+}).filter(element => element !== undefined);
+
+console.log(list_par_number);
+
+// Seconda Soluzione 
+
+function HandleArraysParGen(list){
+    let list_export = [];
+    console.log("Array Filtrato in una lista:");
+    list.filter((element) =>{
+       if (element % 2 === 0) {
+        list_export.push(element);
+       }
+    })
+    return list_export;
+}
+
+console.log(HandleArraysParGen(list_number));
+
+// TASK DI QUESTO ESERCIZIO:
+// Somma di tutti i numeri (reduce)
+// Scrivi una funzione che somma tutti i numeri in un array e restituisce il totale.
+
+const list_num_1 = [10, 20, 30, 50, 60];
+
+console.log("Lista ridotta:");
+let reduced_num_list = list_num_1.reduce((num1, num2) => num1 + num2);
+
+console.log(reduced_num_list);
