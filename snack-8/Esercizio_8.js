@@ -225,10 +225,10 @@ console.log(list_par_number);
 
 // Seconda Soluzione 
 
-function HandleArraysParGen(list){
+function HandleArraysParGen(){
     let list_export = [];
     console.log("Array Filtrato in una lista:");
-    list.filter((element) =>{
+    list_number.filter((element) => {
        if (element % 2 === 0) {
         list_export.push(element);
        }
@@ -236,7 +236,7 @@ function HandleArraysParGen(list){
     return list_export;
 }
 
-console.log(HandleArraysParGen(list_number));
+console.log(HandleArraysParGen());
 
 // TASK DI QUESTO ESERCIZIO:
 // Somma di tutti i numeri (reduce)
@@ -248,3 +248,33 @@ console.log("Lista ridotta:");
 let reduced_num_list = list_num_1.reduce((num1, num2) => num1 + num2);
 
 console.log(reduced_num_list);
+
+// TASK DI QUESTO ESERCIZIO:
+// Trova il primo numero maggiore di 10 (find)
+// Scrivi una funzione che trovi il primo numero nell’array che sia maggiore di 10.
+
+const list_num_2  = [2, 5, 12, 8, 30];
+
+console.log("Trova il numero maggiore di 10:")
+let find_number_list = list_num_2.find((element) => element > 10);
+
+console.log(find_number_list);
+
+// TASK DI QUESTO ESERCIZIO:
+// Unisci due array senza duplicati (concat, Set)
+// Scrivi una funzione che unisce due array e rimuove i duplicati.
+
+const list_num_3 = [1, 2, 3, 4, 5, 6];
+const list_num_4 = [7, 8, 9, 10, 11, 12];
+
+const HandleUnionListNumGen = ()=>{
+    let union_num = [];
+
+    console.log("Unione della lista della fatta:")
+    // union_num.push(list_num_3.concat(list_num_4), list_num_3, list_num_4);
+    union_num = union_num.concat(list_num_3, list_num_4);
+
+    return union_num;
+}
+
+console.log(HandleUnionListNumGen())
