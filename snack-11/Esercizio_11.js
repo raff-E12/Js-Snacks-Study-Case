@@ -245,9 +245,10 @@ const HandleFindProperty = (list)=>{
 console.log(HandleFindProperty(list_number_2));
 
 const HandleFindPropertyMax = ()=>{
-    let result = undefined;
-    let number_max = list_number_2.forEach(element => element > 20 && result === undefined ? result = element : result = undefined);
-    return result
+    let max = Math.max(...list_number_2); // con lo spread operator
+    let result = undefined; // Variabile di contennimento del valore
+    let number_max = list_number_2.forEach(element => element > 10 && result === undefined ? result = element : result = undefined);
+    return max
 }
 
 console.log(HandleFindPropertyMax())
