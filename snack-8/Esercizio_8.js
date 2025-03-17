@@ -112,8 +112,8 @@ const HandleCompObjGen = ()=>{
     console.log("Ecco la lista completa:");
 
     for (const key in object_3) {
-        // new_House[name] = {name: name.shift(), age: num.shift()};
-        new_House[name.shift(key)] = num.shift();
+        // new_House[key] = {name: name.shift(), age: num.shift()};
+        new_House[name.shift()] = num.shift();
     }
 
     return new_House;

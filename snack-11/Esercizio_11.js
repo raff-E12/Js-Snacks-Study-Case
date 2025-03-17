@@ -231,3 +231,23 @@ const HandleInputVocals = ()=>{
 //     const string_name = 'Hello World';
 
 //     console.log(string_name.split(" "))
+
+// TASK DEL GIORNO:
+// Trova il primo numero maggiore di 10:
+// Scrivi una funzione che trovi il primo numero nell’array che sia maggiore di 10.
+
+const list_number_2 = [2, 5, 12, 8, 30];
+
+const HandleFindProperty = (list)=>{
+    return list.find((element) => element > 10);
+}
+
+console.log(HandleFindProperty(list_number_2));
+
+const HandleFindPropertyMax = ()=>{
+    let result = undefined;
+    let number_max = list_number_2.forEach(element => element > 20 && result === undefined ? result = element : result = undefined);
+    return result
+}
+
+console.log(HandleFindPropertyMax())
