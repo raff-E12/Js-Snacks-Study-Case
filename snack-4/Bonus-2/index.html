@@ -81,6 +81,10 @@
             padding: 5px;
         }
 
+        .par-list.list{
+            gap: 10px;
+        }
+
         .par-box{
             width: 400px;
             background-color: #fbb00f;
@@ -89,6 +93,22 @@
             text-wrap: initial;
             font-weight: 600;
             color: white;
+            gap: 20px;
+            border: 3px solid #F28705;
+            text-transform: capitalize;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .par-box-list{
+            width: 300px;
+            gap: 70px;
+            background-color: #fbb00f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            font-weight: 600;
+            padding: 10px;
             border: 3px solid #F28705;
             text-transform: capitalize;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -137,6 +157,18 @@
                 <button id="reset-btn">Reset</button>
             </span>
             <span class="par-list"></span>
+        </div>
+    </section>
+    <hr id="line">
+    <section class="container-ex">
+        <div class="box-cont">
+            <h2>Lista della spesa:</h2>
+            <span class="container-small">
+                <input type="text" name="text" id="text-add" placeholder="Compila la lista..">
+                <button id="add-btn-list">Add</button>
+            </span>
+            <span class="par-list list" id="list-add">
+            </span>
         </div>
     </section>
     <script src="bonus_2.js"></script>
