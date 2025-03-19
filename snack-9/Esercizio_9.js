@@ -175,13 +175,14 @@ const HandleOBJMaxListV1 = (obj)=>{
 console.log(HandleOBJMaxListV1(object_4))
 
 
-// const Object_new = {a: 10, b: 22, c: 30, d: 40};
+const Object_new = {a: 10, b: 22, c: 30, d: 40};
 
-// const value_obj = ()=>{
-//     let num = {}
-//     for (const key in Object_new) {
-//         num[Object_new[key]] = key;
-//     }
-//     return num
-// };
+const value_obj = ()=>{
+    let num = {}
+    for (const key in Object_new) {
+        num[Object_new[key]] = key;
+    }
+    return num
+};
+
 // console.log(value_obj());
