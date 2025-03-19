@@ -51,11 +51,47 @@
             width: 500px;
             padding: 10px;
             display: flex;
-            gap: 2px;
+            gap: 10px;
             background-color: #ffc548;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
+        }
+
+        #line{
+            width: 100%;
+        }
+
+        .container-small{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .par-list{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            padding: 5px;
+        }
+
+        .par-box{
+            width: 400px;
+            background-color: #fbb00f;
+            text-align: center;
+            padding: 10px;
+            text-wrap: initial;
+            font-weight: 600;
+            color: white;
+            border: 3px solid #F28705;
+            text-transform: capitalize;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
@@ -72,6 +108,35 @@
             <h2>Premi il pulsante:</h2>
             <p id="par-id">Contatore: 0</p>
             <button id="btn-min">Min</button>
+        </div>
+    </section>
+    <hr id="line">
+    <section class="container-ex">
+        <div class="box-cont">
+            <h2>Premi il pulsante:</h2>
+            <p id="par-id-1">Contatore: 0</p>
+            <button id="btn-max">Max</button>
+        </div>
+    </section>
+    <hr id="line">
+    <section class="container-ex">
+        <div class="box-cont">
+            <h2>Scopri la parola nascosta:</h2>
+            <p id="par-show">Parola Nascosta.</p>
+            <button id="btn-show">Scopri</button>
+        </div>
+    </section>
+    <hr id="line">
+    <section class="container-ex">
+        <div class="box-cont">
+            <h2>Aggiungi la lista di paragrafi:</h2>
+            <span class="container-small">
+                <input type="text" name="text" id="text" required placeholder="Aggiungi...">
+                <button id="add-btn">Add</button>
+                <input type="color" name="color" id="color-inp">
+                <button id="reset-btn">Reset</button>
+            </span>
+            <span class="par-list"></span>
         </div>
     </section>
     <script src="bonus_2.js"></script>
