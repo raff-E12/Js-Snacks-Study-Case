@@ -162,6 +162,7 @@ class Spesa_obj{
         this.add_btn = document.getElementById("add-btn-list");
         this.par_text = document.getElementById("text-id-add");
 
+        // elemento delegato su vari elementi che hanno come classe "remove-btn"
         this.parent.addEventListener("click", (e)=>{
             if (e.target.classList.contains("remove-btn")) {
                 e.target.parentElement.remove();
