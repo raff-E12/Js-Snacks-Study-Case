@@ -103,6 +103,9 @@ class Add_Par{
         this.InputCheck = this.InputCheck.bind(this);
         this.color = document.getElementById("color-inp");
         this.btn_add.addEventListener("click", this.InputCheck);
+        this.reset = document.getElementById("reset-btn");
+        this.InputReset = this.InputReset.bind(this);
+        this.reset.addEventListener("click", this.InputReset);
     }
 
     InputCheck(){
@@ -122,23 +125,73 @@ class Add_Par{
             window.alert("Inserisci come qualcosa di input");
         }
         }
+
+        InputReset(){
+            // return console.log("hello");
+            this.input.value = "";  // this.input viene inizializzato dopo
+            this.parent.innerHTML = "";
+            window.alert("La lista è stata resettata.");
+        }    
 }
 
-class reset extends Add_Par{
-    constructor(parent){
-        super(parent);
-        this.reset = document.getElementById("reset-btn");
-        this.InputReset = this.InputReset.bind(this);
-        this.reset.addEventListener("click", this.InputReset);
-    }
+// class reset extends Add_Par{
+//     constructor(parent){
+//         super(parent);
+//         this.reset = document.getElementById("reset-btn");
+//         this.InputReset = this.InputReset.bind(this);
+//         this.reset.addEventListener("click", this.InputReset);
+//     }
 
-    InputReset(){
-        // return console.log("hello");
-        this.input.value = "";  // this.input viene inizializzato dopo
-        this.parent.innerHTML = "";
-        window.alert("La lista è stata resettata.")
-    }
-}
+//     InputReset(){
+//         // return console.log("hello");
+//         this.input.value = "";  // this.input viene inizializzato dopo
+//         this.parent.innerHTML = "";
+//         window.alert("La lista è stata resettata.")
+//     }
+// }
 
 const parent_node_list = new Add_Par(".par-list");
-const reset_Btn = new reset(".par-list");
+// const reset_Btn = new reset(".par-list");
+
+// Crea un lista della spesa con le classi:
+
+class Spesa_obj{
+    constructor(parent){
+        this.parent = document.querySelector(parent);
+        this.input = document.getElementById("text-add");
+        this.add_btn = document.getElementById("add-btn-list");
+        this.par_text = document.getElementById("text-id-add");
+
+        this.parent.addEventListener("click", (e)=>{
+            if (e.target.classList.contains("remove-btn")) {
+                e.target.parentElement.remove();
+            }
+        })
+
+        this.InputCheckAdd = this.InputCheckAdd.bind(this);
+        this.add_btn.addEventListener("click", this.InputCheckAdd);
+    }
+
+    InputCheckAdd(){
+        let value = this.input.value;
+        if (value !== ""){
+            let element_p = document.createElement("p");
+            let bold_text = document.createElement("b");
+            bold_text.textContent = value;
+
+            let remove_btn = document.createElement("button");
+            remove_btn.className = "remove-btn";
+            remove_btn.textContent = "remove";
+
+            element_p.appendChild(bold_text);
+            element_p.appendChild(remove_btn);
+            element_p.className = "par-box-list";
+            this.parent.appendChild(element_p);
+            return this.parent;
+        } else{
+            window.alert("La lista è stata resettata.");
+        }
+    } 
+}
+
+const new_box_list = new Spesa_obj("#list-add");
